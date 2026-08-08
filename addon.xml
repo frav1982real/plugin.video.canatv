@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.canatv" name="CanàTV" version="0.0.1" provider-name="FraV1982">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="inputstream.adaptive" optional="false"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="it_IT">Canali italiani da sorgenti ufficiali/pubbliche e generatore M3U per PVR IPTV Simple Client.</summary>
+    <description lang="it_IT">Add-on che legge IPTV-Italia, filtra i canali presenti nella lista Sky-style allegata quando disponibili da fonti ufficiali, e genera una playlist M3U/EPG utilizzabile con PVR IPTV Simple Client. Non include resolver, token, chiavi DRM o flussi premium/non autorizzati.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/FrankVan1982/canatv</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
