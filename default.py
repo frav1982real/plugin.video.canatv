@@ -9,14 +9,9 @@ import logging
 
 addon_id = "plugin.video.canatv"
 xbmcaddon.Addon(id=addon_id).getSetting("debug")
+info = xbmcaddon.Addon(id=addon_id).getAddonInfo()
 
-def test():
-    info = xbmcaddon.Addon(id=addon_id).getAddonInfo()
+def log(info):
+    dialog = xbmcgui.Dialog()
+    dialog.ok(info)
 
-    def log():
-        dialog = xbmcgui.Dialog()
-        dialog.ok(info)
-
-    log()
-
-test()

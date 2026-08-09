@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.canatv" name="CanàTV" version="0.0.1" provider-name="FraV1982">
+<addon id="plugin.video.canatv" name="CanàTV" version="0.0.2" provider-name="FraV1982">
   <requires>
     <import addon="xbmc.python" version="3.0.1" />
     <import addon="inputstream.adaptive" />
