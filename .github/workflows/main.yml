@@ -6,6 +6,9 @@ on:
       - main
       - master
 
+permissions:
+  contents: write
+
 jobs:
   zip:
     runs-on: ubuntu-latest
