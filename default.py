@@ -8,6 +8,7 @@ import xbmcplugin
 import xbmcgui
 import logging
 import urllib.parse
+import resolver
 
 addon_id = "plugin.video.canatv"
 addon = xbmcaddon.Addon(id=addon_id)
@@ -21,11 +22,11 @@ def build_url(action):
 
 params = urllib.parse.parse_qs(sys.argv[2][1:])
 action = params.get('action', [None])[0]
-
+testpath = resolver.sky(parIn="skysport24")  # Ottieni il flusso di prova da resolver.py
 
 if action == 'play_video':
     # Riproduci un video
-    item = xbmcgui.ListItem(path='https://esempio.com/video.mp4')
+    item = xbmcgui.ListItem(path=testpath)
     xbmcplugin.setResolvedUrl(addon_handle, True, item)
 
 elif action == 'open_settings':
@@ -62,7 +63,7 @@ elif action == 'subfolder':
 # =====================
 else:
     items = [
-        ('Riproduci Video',    'play_video',        'DefaultMovies.png',    False),
+        ('Riproduci Flusso di Prova (skysport24)',    'play_video',        'DefaultMovies.png',    False),
         ('Impostazioni',       'open_settings',      'DefaultAddon.png',     False),
         ('Avvia Script',       'run_script',         'DefaultProgram.png',   False),
         ('Mostra Notifica',    'show_notification',  'DefaultAddon.png',     False),
