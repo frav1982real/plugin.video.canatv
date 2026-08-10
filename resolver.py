@@ -20,6 +20,19 @@ PY3 = sys.version_info[0] == 3
 def id_generator(size=6, chars=string.ascii_letters + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 
+# Compat: il resolver.py richiama logga() e msgBox() in sky();
+# se il modulo importato non li espone nell'ambito locale, usiamo fallback.
+def logga(message):
+    if hasattr(launcher, 'logga'):
+        return launcher.logga(message)
+    logging.warning('CANA_LOG: %s', message)
+
+def msgBox(message, title='CanàTV'):
+    try:
+        xbmcgui.Dialog().ok(title, message)
+    except Exception as exc:
+        logging.warning('msgBox fallback: %s (%s)', message, exc)
+
 def xor_decrypt(data_b64, key):
     import base64
 
