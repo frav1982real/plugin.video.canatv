@@ -13,6 +13,13 @@ import launcher
 
 from urllib.request import Request, urlopen
 
+addon_id = 'plugin.video.canatv'
+PY3 = sys.version_info[0] == 3
+
+# Compat: genera un ID dispositivo a 6 caratteri usato per l'UA/headers.
+def id_generator(size=6, chars=string.ascii_letters + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
+
 def xor_decrypt(data_b64, key):
     import base64
 
@@ -46,8 +53,8 @@ def makeRequest(url, hdr=None):
         response = myRequest.urlopen(req, timeout=45)
         html = response.read().decode('utf-8')
         response.close()
-    except:
-        logging.warning('Error to open url: '+url)
+    except Exception as exc:
+        logging.warning('Error to open url: %s (%s)', url, exc)
         pass
     return html
 

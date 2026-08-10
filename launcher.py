@@ -28,6 +28,10 @@ if PY3:
 else:
     from urlparse import urlparse, parse_qsl
     from urllib import urlencode, quote
+
+# Compat: genera un ID dispositivo a 6 caratteri usato per l'UA/headers.
+def id_generator(size=6, chars=string.ascii_letters + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
 	
 def logga(mess):
     global testoLog
