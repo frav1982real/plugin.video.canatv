@@ -16,7 +16,7 @@ import xbmcvfs
 _url = sys.argv[0]
 # Get the plugin handle as an integer number.
 _handle = int(sys.argv[1])
-addon_id = 'plugin.video.mandrakodi'
+addon_id = 'plugin.video.canatv'
 #selfAddon = xbmcaddon.Addon(id=addon_id)
 xbmcaddon.Addon(id=addon_id).setSetting("debug", "on")
 
