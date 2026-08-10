@@ -53,8 +53,8 @@ elif action == 'subfolder':
     # Mostra un sottomenu
     li = xbmcgui.ListItem('Voce secondaria')
     url = build_url('play_video')
-    xbmcplugin.addDirectoryItem(addon_handle, url, li, isFolder=False)
-    xbmcplugin.endOfDirectory(addon_handle)
+    xbmcplugin.addDirectoryItem(addon, url, li, isFolder=False)
+    xbmcplugin.endOfDirectory(addon)
 
 # =====================
 # MENU PRINCIPALE
@@ -73,6 +73,6 @@ else:
     for label, act, icon, is_folder in items:
         li = xbmcgui.ListItem(label)
         li.setArt({'icon': icon})
-        xbmcplugin.addDirectoryItem(addon_handle, build_url(act), li, isFolder=is_folder)
+        xbmcplugin.addDirectoryItem(addon, build_url(act), li, isFolder=is_folder)
 
-    xbmcplugin.endOfDirectory(addon_handle)
+    xbmcplugin.endOfDirectory(addon)
