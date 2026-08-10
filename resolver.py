@@ -10,8 +10,21 @@ import xbmcgui
 import xbmc
 import xbmcaddon
 import xbmcplugin
+import launcher
 
 from urllib.request import Request, urlopen
+
+def xor_decrypt(data_b64, key):
+    import base64
+
+    data = base64.b64decode(data_b64)
+    key_bytes = key.encode()
+
+    out = bytearray()
+    for i in range(len(data)):
+        out.append(data[i] ^ key_bytes[i % len(key_bytes)])
+
+    return out.decode("utf-8")
 
 def makeRequest(url, hdr=None):
     html = ""
