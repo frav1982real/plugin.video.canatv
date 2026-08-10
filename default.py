@@ -14,9 +14,10 @@ addon_id = "plugin.video.canatv"
 addon = xbmcaddon.Addon(id=addon_id)
 xbmcaddon.Addon(id=addon_id).getSetting("debug")
 addon_path = xbmcaddon.Addon().getAddonInfo('path')
+addon_handle = int(sys.argv[1])
 
 def build_url(action):
-    return addon + '?' + urllib.parse.urlencode({'action': action})
+    return sys.argv[0] + '?' + urllib.parse.urlencode({'action': action})
 
 params = urllib.parse.parse_qs(sys.argv[2][1:])
 action = params.get('action', [None])[0]
@@ -25,7 +26,7 @@ testpath = resolver.sky(parIn="skysport24")  # Ottieni il flusso di prova da res
 if action == 'play_video':
     # Riproduci un video
     item = xbmcgui.ListItem(path=testpath)
-    xbmcplugin.setResolvedUrl(addon, True, item)
+    xbmcplugin.setResolvedUrl(addon_handle, True, item)
 
 elif action == 'open_settings':
     # Apri le impostazioni dell'addon
@@ -53,8 +54,8 @@ elif action == 'subfolder':
     # Mostra un sottomenu
     li = xbmcgui.ListItem('Voce secondaria')
     url = build_url('play_video')
-    xbmcplugin.addDirectoryItem(addon, url, li, isFolder=False)
-    xbmcplugin.endOfDirectory(addon)
+    xbmcplugin.addDirectoryItem(addon_handle, url, li, isFolder=False)
+    xbmcplugin.endOfDirectory(addon_handle)
 
 # =====================
 # MENU PRINCIPALE
@@ -73,6 +74,6 @@ else:
     for label, act, icon, is_folder in items:
         li = xbmcgui.ListItem(label)
         li.setArt({'icon': icon})
-        xbmcplugin.addDirectoryItem(addon, build_url(act), li, isFolder=is_folder)
+        xbmcplugin.addDirectoryItem(addon_handle, build_url(act), li, isFolder=is_folder)
 
-    xbmcplugin.endOfDirectory(addon)
+    xbmcplugin.endOfDirectory(addon_handle)
