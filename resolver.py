@@ -1,10 +1,9 @@
-import re, requests, sys, logging, uuid
+import re, sys, logging, uuid
 import os
 import string
 import random
 import traceback
 from urllib.parse import quote_plus, urlparse, parse_qsl, unquote
-from requests import Response
 
 import xbmcgui
 import xbmc
