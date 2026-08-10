@@ -12,13 +12,11 @@ import resolver
 
 addon_id = "plugin.video.canatv"
 addon = xbmcaddon.Addon(id=addon_id)
-addon_handle = int(sys.argv[1])
 xbmcaddon.Addon(id=addon_id).getSetting("debug")
-base_url = sys.argv[0]
 addon_path = xbmcaddon.Addon().getAddonInfo('path')
 
 def build_url(action):
-    return base_url + '?' + urllib.parse.urlencode({'action': action})
+    return addon + '?' + urllib.parse.urlencode({'action': action})
 
 params = urllib.parse.parse_qs(sys.argv[2][1:])
 action = params.get('action', [None])[0]
@@ -27,7 +25,7 @@ testpath = resolver.sky(parIn="skysport24")  # Ottieni il flusso di prova da res
 if action == 'play_video':
     # Riproduci un video
     item = xbmcgui.ListItem(path=testpath)
-    xbmcplugin.setResolvedUrl(addon_handle, True, item)
+    xbmcplugin.setResolvedUrl(addon, True, item)
 
 elif action == 'open_settings':
     # Apri le impostazioni dell'addon
