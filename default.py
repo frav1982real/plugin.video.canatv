@@ -23,12 +23,12 @@ params = urllib.parse.parse_qs(sys.argv[2][1:])
 action = params.get('action', [None])[0]
 testpath = resolver.sky(parIn="skysport24")  # Ottieni il flusso di prova da resolver.py
 
-if action == 'play_video':
+if action == 'play_videotest':
     # Riproduci un video
-    item = xbmcgui.ListItem(path=testpath)
+    item = xbmcgui.ListItem(path="https://file-examples.com/wp-content/storage/2018/04/file_example_AVI_1920_2_3MG.avi")
     xbmcplugin.setResolvedUrl(addon_handle, True, item)
 
-elif action == 'open_settings':
+elif action == 'open_settings_pvr':
     # Apri le impostazioni dell'addon
     addon.openSettings()
 
@@ -62,8 +62,8 @@ elif action == 'subfolder':
 # =====================
 else:
     items = [
-        ('Riproduci Flusso di Prova (skysport24)',    'play_video',        'DefaultMovies.png',    False),
-        ('Impostazioni',       'open_settings',      'DefaultAddon.png',     False),
+        ('Riproduci Flusso di Prova (skysport24)',    'play_videotest',        'DefaultMovies.png',    False),
+        ('Apri impostazioni PVR IPTV Simple Client',  'open_settings_pvr',      'DefaultAddon.png',     False),
         ('Avvia Script',       'run_script',         'DefaultProgram.png',   False),
         ('Mostra Notifica',    'show_notification',  'DefaultAddon.png',     False),
         ('Conferma Azione',    'ask_user',           'DefaultAddon.png',     False),
