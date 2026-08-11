@@ -25,9 +25,9 @@ testpath = resolver.sky(parIn="skysport24")  # Ottieni il flusso di prova da res
 
 if action == 'play_videotest':
     # Riproduci un video
-    path="https://file-examples.com/wp-content/storage/2018/04/file_example_AVI_1920_2_3MG.avi"
+    vipath="https://file-examples.com/wp-content/storage/2018/04/file_example_AVI_1920_2_3MG.avi"
     item = xbmcgui.ListItem(offscreen=True)
-    item.setPath(path)
+    item.setPath(vipath)
     xbmcplugin.setResolvedUrl(addon_handle, True, listitem=item)
 
 elif action == 'open_settings_pvr':
