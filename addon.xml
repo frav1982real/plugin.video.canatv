@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.canatv" name="CanàTV" version="1.1.0~rc3" provider-name="FraV1982">
+<addon id="plugin.video.canatv" name="CanàTV" version="1.1.0~rc4" provider-name="FraV1982">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.requests" version="2.22.0" />
@@ -13,16 +13,19 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="it_IT">Canali TV italiani (DTT, Web, Sky/NowTV) con PVR IPTV Simple Client.</summary>
     <summary lang="en_GB">Italian TV channels (DTT, Web, Sky/NowTV) with PVR IPTV Simple Client.</summary>
-    <description lang="it_IT">Add-on basato sulla scaletta LCN di canali.json: nomi e gruppi restano quelli della lista, mentre WorldLiveTV, Sky e Vavoo.to forniscono gli stream. Ogni click tenta la sorgente primaria e poi Vavoo come ultima opzione. Genera playlist M3U ed EPG per PVR IPTV Simple Client. I canali pay-per-view richiedono abbonamento Sky/NowTV valido.</description>
-    <description lang="en_GB">Add-on built on the canali.json LCN lineup: names and groups stay as listed, while WorldLiveTV, Sky and Vavoo.to supply the streams. Every click tries the primary source and Vavoo as the last option. Generates an M3U playlist and EPG for PVR IPTV Simple Client. Pay-per-view channels require a valid Sky/NowTV subscription.</description>
+    <description lang="it_IT">Add-on basato sulla scaletta LCN di canali.json: nomi e gruppi restano quelli della lista, mentre WorldLiveTV, Sky e Vavoo.to forniscono gli stream. Probe del manifest prima della riproduzione: se il manifest Sky pay/free e' scaduto, Vavoo parte automaticamente. Genera playlist M3U ed EPG per PVR IPTV Simple Client. I canali pay-per-view richiedono abbonamento Sky/NowTV valido.</description>
+    <description lang="en_GB">Add-on built on the canali.json LCN lineup: names and groups stay as listed, while WorldLiveTV, Sky and Vavoo.to supply the streams. Manifest probe before playback: expired Sky pay/free manifests trigger automatic Vavoo fallback. Generates an M3U playlist and EPG for PVR IPTV Simple Client. Pay-per-view channels require a valid Sky/NowTV subscription.</description>
     <disclaimer lang="it_IT">Addon non ufficiale. I flussi pay-per-view richiedono abbonamento Sky/NowTV valido. Usare solo con contenuti a cui si ha legittimamente accesso.</disclaimer>
     <disclaimer lang="en_GB">Unofficial addon. Pay-per-view streams require valid Sky/NowTV subscription. Use only with content you have legitimate access to.</disclaimer>
     <platform>all</platform>
     <license>MIT</license>
     <language>it</language>
     <source>https://github.com/FrankVan1982/canatv</source>
-    <news>v1.1.0~rc3
-- FIX: utils.SKY_PPV_ALIASES.get(...) in resolver.py (era SKY_PPV_ALIASES senza prefisso utils, causava NameError)
+    <news>v1.1.0~rc4
+- Probe manifest prima della riproduzione in resolver.py (_probe_manifest)
+- Se il manifest Sky pay/free risulta scaduto/non valido, _resolve Sky pay e resolve Sky free ritornano None -> Vavoo fallback attivato automaticamente
+- Risolto il bug: Sky PPV che caricava ma chiudeva subito il player quando il token/manifest era scaduto, Kodi vedeva il setResolvedUrl come OK e non richiamava il fallback
+- FIX precedente gia incluso: utils.SKY_PPV_ALIASES.get(...) (era SKY_PPV_ALIASES senza prefisso utils, causava NameError)
 - Aggiunti alias per sky_ppv_id in resolver.py (_pay_id_candidates)
 - Aggiunti alias per il matching Vavoo in channel_fetcher.py (VAVOO_ALIASES)
 - Sky Sport Calcio, Sky Sport Basket, Nick Jr. ora hanno un matching più robusto su Sky Pay e Vavoo.to
