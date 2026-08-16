@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.canatv" name="CanàTV" version="0.0.3" provider-name="FraV1982">
+<addon id="plugin.video.canatv" name="CanàTV" version="1.1.0~rc3" provider-name="FraV1982">
   <requires>
-    <import addon="xbmc.python" version="3.0.1" />
-    <import addon="inputstream.adaptive" />
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" version="2.22.0" />
+    <import addon="inputstream.adaptive" version="19.0.0" optional="true" />
+    <import addon="pvr.iptvsimple" version="7.0.0" optional="true" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
+  <extension point="xbmc.service" library="service.py" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="it_IT">Canali italiani da sorgenti ufficiali/pubbliche e generatore M3U per PVR IPTV Simple Client.</summary>
-    <description lang="it_IT">Add-on che legge IPTV-Italia, filtra i canali presenti nella lista Sky-style allegata quando disponibili da fonti ufficiali, e genera una playlist M3U/EPG utilizzabile con PVR IPTV Simple Client. Non include resolver, token, chiavi DRM o flussi premium/non autorizzati.</description>
+    <summary lang="it_IT">Canali TV italiani (DTT, Web, Sky/NowTV) con PVR IPTV Simple Client.</summary>
+    <summary lang="en_GB">Italian TV channels (DTT, Web, Sky/NowTV) with PVR IPTV Simple Client.</summary>
+    <description lang="it_IT">Add-on basato sulla scaletta LCN di canali.json: nomi e gruppi restano quelli della lista, mentre WorldLiveTV, Sky e Vavoo.to forniscono gli stream. Ogni click tenta la sorgente primaria e poi Vavoo come ultima opzione. Genera playlist M3U ed EPG per PVR IPTV Simple Client. I canali pay-per-view richiedono abbonamento Sky/NowTV valido.</description>
+    <description lang="en_GB">Add-on built on the canali.json LCN lineup: names and groups stay as listed, while WorldLiveTV, Sky and Vavoo.to supply the streams. Every click tries the primary source and Vavoo as the last option. Generates an M3U playlist and EPG for PVR IPTV Simple Client. Pay-per-view channels require a valid Sky/NowTV subscription.</description>
+    <disclaimer lang="it_IT">Addon non ufficiale. I flussi pay-per-view richiedono abbonamento Sky/NowTV valido. Usare solo con contenuti a cui si ha legittimamente accesso.</disclaimer>
+    <disclaimer lang="en_GB">Unofficial addon. Pay-per-view streams require valid Sky/NowTV subscription. Use only with content you have legitimate access to.</disclaimer>
     <platform>all</platform>
     <license>MIT</license>
+    <language>it</language>
     <source>https://github.com/FrankVan1982/canatv</source>
+    <news>v1.1.0~rc3
+- FIX: utils.SKY_PPV_ALIASES.get(...) in resolver.py (era SKY_PPV_ALIASES senza prefisso utils, causava NameError)
+- Aggiunti alias per sky_ppv_id in resolver.py (_pay_id_candidates)
+- Aggiunti alias per il matching Vavoo in channel_fetcher.py (VAVOO_ALIASES)
+- Sky Sport Calcio, Sky Sport Basket, Nick Jr. ora hanno un matching più robusto su Sky Pay e Vavoo.to
+
+- Vavoo.to sempre ultima opzione per ogni canale (anche quelli con URL WLTV valido)
+- Safety net on-the-fly: se vavoo_id manca, viene cercato live col nome del canale
+- LA7: aggiunti endpoint Akamai aggiuntivi
+- Sky pay e Vavoo: se Sky pay API fallisce, scatta Vavoo automaticamente
+- Canali senza alcuna fonte (WLTV/Sky/Vavoo) rimossi automaticamente dal LCN
+- Nuova sezione impostazioni Vavoo.to (abilita/disabilita fallback)
+    </news>
     <assets>
       <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>

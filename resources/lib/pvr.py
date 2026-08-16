@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import xbmc
 import xbmcaddon
 import xbmcgui
@@ -10,7 +11,7 @@ import xbmcvfs
 
 from . import utils
 
-PVR_ID = utils.PVR_ID
+PVR_ID = utils.PVR_ADDON_ID
 
 def _translate(path):
     try:
@@ -168,41 +169,56 @@ def export_list_to_pvr(m3u_path, epg_url, instance_name):
         os.path.join(pvr_path, "instance-settings-%d.xml" % instance_id)
     )
 
+    logo = "2" if utils.setting_bool("pvr_logo_from_epg", True) else "0"
+    special_m3u = "special://profile/addon_data/%s/canali_italia.m3u" % utils.ADDON_ID
     try:
-        # --- M3U: file locale ---
         simple_client.setSetting("m3uPathType", "0")
-        simple_client.setSetting("m3uPath", m3u_path)
+        simple_client.setSetting("m3uPath", special_m3u)
         simple_client.setSetting("m3uUrl", "")
-        simple_client.setSetting("m3uCache", "true")
-
-        # --- EPG: URL remoto (lo scarica e aggiorna il client PVR) ---
+        simple_client.setSetting("m3uCache", "false")
         simple_client.setSetting("epgPathType", "1")
         simple_client.setSetting("epgUrl", epg_url)
         simple_client.setSetting("epgPath", "")
         simple_client.setSetting("epgCache", "true")
-
-        # loghi canale dall'EPG quando mancano nell'M3U
-        simple_client.setSetting("logoFromEpg", "2")
-
-        # --- Metadati dell'istanza ---
+        simple_client.setSetting("logoFromEpg", logo)
         simple_client.setSetting("kodi_addon_instance_name", instance_name)
         simple_client.setSetting("kodi_addon_instance_enabled", "true")
     except Exception as exc:
         utils.log("export: setSetting fallito: %s" % exc)
+
+    xml_body = (
+        '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n'
+        '<settings version="2">\n'
+        '  <setting id="m3uPathType">0</setting>\n'
+        '  <setting id="m3uPath">%s</setting>\n'
+        '  <setting id="m3uUrl"></setting>\n'
+        '  <setting id="m3uCache">false</setting>\n'
+        '  <setting id="epgPathType">1</setting>\n'
+        '  <setting id="epgUrl">%s</setting>\n'
+        '  <setting id="epgPath"></setting>\n'
+        '  <setting id="epgCache">true</setting>\n'
+        '  <setting id="logoFromEpg">%s</setting>\n'
+        '  <setting id="kodi_addon_instance_name">%s</setting>\n'
+        '  <setting id="kodi_addon_instance_enabled">true</setting>\n'
+        "</settings>\n"
+    ) % (
+        utils.xml_escape(special_m3u),
+        utils.xml_escape(epg_url),
+        logo,
+        utils.xml_escape(instance_name),
+    )
+    try:
+        fh = xbmcvfs.File(instance_settings_path, "w")
+        try:
+            fh.write(xml_body)
+        finally:
+            fh.close()
+    except Exception as exc:
+        utils.log("export: scrittura instance xml fallita: %s" % exc)
         return False
 
-    # da' il tempo a Kodi di scrivere settings.xml, poi copialo sull'istanza
-    xbmc.sleep(500)
-    try:
-        if xbmcvfs.exists(settings_path):
-            xbmcvfs.copy(settings_path, instance_settings_path)
-    except Exception as exc:
-        utils.log("export: copia settings.xml fallita: %s" % exc)
-    _safe_delete(settings_path)
-
-    utils.log(
-        "Istanza %d configurata: m3u=%s epg=%s" % (instance_id, m3u_path, epg_url)
-    )
+    ensure_enabled()
+    utils.log("Istanza %d configurata: m3u=%s" % (instance_id, special_m3u))
     return True
 
 

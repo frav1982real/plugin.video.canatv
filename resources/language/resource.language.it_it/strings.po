@@ -1,0 +1,213 @@
+# Kodi Media Center language file
+# Addon Name: CanàTV
+# Addon id: plugin.video.canatv
+# Addon Provider: FraV1982
+msgid ""
+msgstr ""
+"Project-Id-Version: plugin.video.canatv\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FraV1982\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "General"
+msgstr "Generale"
+
+msgctxt "#30001"
+msgid "Debug logging"
+msgstr "Log di debug"
+
+msgctxt "#30002"
+msgid "PVR instance name"
+msgstr "Nome istanza PVR"
+
+msgctxt "#30003"
+msgid "Auto-update on startup"
+msgstr "Aggiornamento automatico all'avvio"
+
+msgctxt "#30004"
+msgid "Update on wake from standby"
+msgstr "Aggiorna al risveglio da standby"
+
+msgctxt "#30005"
+msgid "Periodic update (hourly)"
+msgstr "Aggiornamento periodico (ogni ora)"
+
+msgctxt "#30100"
+msgid "Sky Pay-per-view"
+msgstr "Sky Pay-per-view"
+
+msgctxt "#30101"
+msgid "Enable Sky/NowTV pay channels"
+msgstr "Abilita canali Sky/NowTV pay"
+
+msgctxt "#30102"
+msgid "API endpoint (optional)"
+msgstr "API endpoint (opzionale)"
+
+msgctxt "#30103"
+msgid "Decryption key (optional)"
+msgstr "Chiave di decifratura (opzionale)"
+
+msgctxt "#30200"
+msgid "PVR IPTV Simple Client"
+msgstr "PVR IPTV Simple Client"
+
+msgctxt "#30201"
+msgid "PVR integration enabled"
+msgstr "Integrazione PVR attiva"
+
+msgctxt "#30202"
+msgid "Logos from EPG"
+msgstr "Loghi da EPG"
+
+msgctxt "#30300"
+msgid "WorldLiveTV"
+msgstr "WorldLiveTV"
+
+msgctxt "#30301"
+msgid "Enable free WLTV channels"
+msgstr "Abilita canali gratuiti WLTV"
+
+msgctxt "#30302"
+msgid "Remote EPG URL"
+msgstr "URL EPG remoto"
+
+msgctxt "#30400"
+msgid "Cache"
+msgstr "Cache"
+
+msgctxt "#30401"
+msgid "Cache TTL (seconds)"
+msgstr "TTL cache (secondi)"
+
+msgctxt "#30402"
+msgid "Clear cache now"
+msgstr "Svuota cache ora"
+
+msgctxt "#30500"
+msgid "Vavoo.to (fallback)"
+msgstr "Vavoo.to (fallback)"
+
+msgctxt "#30501"
+msgid "Enable Vavoo.to fallback channels"
+msgstr "Abilita canali fallback Vavoo.to"
+
+msgctxt "#32100"
+msgid "Setup / Update channels"
+msgstr "Configura / Aggiorna canali"
+
+msgctxt "#32101"
+msgid "Browse channels"
+msgstr "Sfoglia canali"
+
+msgctxt "#32102"
+msgid "Playback test"
+msgstr "Test riproduzione"
+
+msgctxt "#32103"
+msgid "Remove PVR"
+msgstr "Rimuovi PVR"
+
+msgctxt "#32104"
+msgid "Settings"
+msgstr "Impostazioni"
+
+msgctxt "#32105"
+msgid "All channels"
+msgstr "Tutti i canali"
+
+msgctxt "#32106"
+msgid "Groups"
+msgstr "Gruppi"
+
+msgctxt "#32200"
+msgid "Update completed: %d of %d channels configured"
+msgstr "Aggiornamento completato: %d di %d canali configurati"
+
+msgctxt "#32201"
+msgid "Missing: %s"
+msgstr "Mancanti: %s"
+
+msgctxt "#32202"
+msgid "Update canceled"
+msgstr "Aggiornamento annullato"
+
+msgctxt "#32203"
+msgid "Update failed: %s"
+msgstr "Aggiornamento fallito: %s"
+
+msgctxt "#32204"
+msgid "PVR instance removed"
+msgstr "Istanza PVR rimossa"
+
+msgctxt "#32205"
+msgid "Removal failed: %s"
+msgstr "Rimozione fallita: %s"
+
+msgctxt "#32206"
+msgid "Confirm update channel list and PVR?"
+msgstr "Confermi aggiornamento lista canali e PVR?"
+
+msgctxt "#32207"
+msgid "Confirm remove PVR instance and generated files?"
+msgstr "Confermi rimozione istanza PVR e file generati?"
+
+msgctxt "#32208"
+msgid "No stream URL for %s"
+msgstr "Nessun URL di stream per %s"
+
+msgctxt "#32209"
+msgid "Stream resolution failed for %s"
+msgstr "Risoluzione flusso fallita per %s"
+
+msgctxt "#32210"
+msgid "Rai 1 not found in catalog"
+msgstr "Rai 1 non trovato nel catalogo"
+
+msgctxt "#32211"
+msgid "Error: %s"
+msgstr "Errore: %s"
+
+msgctxt "#32212"
+msgid "Cache cleared"
+msgstr "Cache svuotata"
+
+msgctxt "#32213"
+msgid "Fetching channel catalog..."
+msgstr "Download catalogo canali..."
+
+msgctxt "#32214"
+msgid "No channels in catalog"
+msgstr "Nessun canale nel catalogo"
+
+msgctxt "#32215"
+msgid "No playable channels found"
+msgstr "Nessun canale riproducibile trovato"
+
+msgctxt "#32216"
+msgid "Generating M3U playlist..."
+msgstr "Generazione playlist M3U..."
+
+msgctxt "#32217"
+msgid "Configuring PVR IPTV Simple Client..."
+msgstr "Configurazione PVR IPTV Simple Client..."
+
+msgctxt "#32218"
+msgid "PVR configuration failed"
+msgstr "Configurazione PVR fallita"
+
+msgctxt "#32219"
+msgid "Cleaning up PVR cache..."
+msgstr "Pulizia cache PVR..."
+
+msgctxt "#32220"
+msgid "Done!"
+msgstr "Completato!"

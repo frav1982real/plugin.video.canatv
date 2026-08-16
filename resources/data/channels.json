@@ -1,0 +1,1562 @@
+[
+  {
+    "lcn": 100,
+    "name": "Sky TG24 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_free",
+    "sky_id": "1",
+    "is_free": true
+  },
+  {
+    "lcn": 101,
+    "name": "Rai 1 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "rai1",
+    "is_free": true
+  },
+  {
+    "lcn": 102,
+    "name": "Rai 2 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "rai2",
+    "is_free": true
+  },
+  {
+    "lcn": 103,
+    "name": "Rai 3 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "rai3",
+    "is_free": true
+  },
+  {
+    "lcn": 104,
+    "name": "Rete 4 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "rete4",
+    "is_free": true
+  },
+  {
+    "lcn": 105,
+    "name": "Canale 5 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "canale5",
+    "is_free": true
+  },
+  {
+    "lcn": 106,
+    "name": "Italia 1 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "italia1",
+    "is_free": true
+  },
+  {
+    "lcn": 107,
+    "name": "LA 7 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "la7",
+    "is_free": true
+  },
+  {
+    "lcn": 108,
+    "name": "Sky Uno HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyuno",
+    "is_free": false
+  },
+  {
+    "lcn": 109,
+    "name": "Sky Uno +1 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyunoplus",
+    "is_free": false
+  },
+  {
+    "lcn": 110,
+    "name": "Sky Atlantic HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyatlantic",
+    "is_free": false
+  },
+  {
+    "lcn": 111,
+    "name": "Sky Atlantic HD +1",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyatlanticplus",
+    "is_free": false
+  },
+  {
+    "lcn": 112,
+    "name": "Sky Serie HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyserie",
+    "is_free": false
+  },
+  {
+    "lcn": 113,
+    "name": "Sky Serie +1 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyserieplus",
+    "is_free": false
+  },
+  {
+    "lcn": 114,
+    "name": "Sky Investigation HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyinvestigation",
+    "is_free": false
+  },
+  {
+    "lcn": 115,
+    "name": "Sky Investigation +1",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyinvestigationplus",
+    "is_free": false
+  },
+  {
+    "lcn": 116,
+    "name": "Sky Crime",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycrime",
+    "is_free": false
+  },
+  {
+    "lcn": 117,
+    "name": "Sky Crime +1",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycrimeplus",
+    "is_free": false
+  },
+  {
+    "lcn": 118,
+    "name": "History",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "history",
+    "is_free": false
+  },
+  {
+    "lcn": 119,
+    "name": "History +1",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "historyplus",
+    "is_free": false
+  },
+  {
+    "lcn": 120,
+    "name": "Sky Documentaries",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skydocumentaries",
+    "is_free": false
+  },
+  {
+    "lcn": 121,
+    "name": "Sky Adventure HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyadventure",
+    "is_free": false
+  },
+  {
+    "lcn": 122,
+    "name": "Sky Nature HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skynature",
+    "is_free": false
+  },
+  {
+    "lcn": 123,
+    "name": "Sky Arte HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyarte",
+    "is_free": false
+  },
+  {
+    "lcn": 124,
+    "name": "Sky Arte +1",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyarteplus",
+    "is_free": false
+  },
+  {
+    "lcn": 125,
+    "name": "TV8 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_free",
+    "sky_id": "7",
+    "is_free": true
+  },
+  {
+    "lcn": 126,
+    "name": "Cielo",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_free",
+    "sky_id": "2",
+    "is_free": true
+  },
+  {
+    "lcn": 127,
+    "name": "NOVE",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "nove",
+    "is_free": true
+  },
+  {
+    "lcn": 129,
+    "name": "Comedy Central",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "comedycentral",
+    "is_free": false
+  },
+  {
+    "lcn": 130,
+    "name": "Comedy Central +1",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_pay",
+    "sky_ppv_id": "comedycentralplus",
+    "is_free": false
+  },
+  {
+    "lcn": 131,
+    "name": "MTV HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "mtv",
+    "is_free": true
+  },
+  {
+    "lcn": 132,
+    "name": "MTV Music",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "mtvmusic",
+    "is_free": true
+  },
+  {
+    "lcn": 133,
+    "name": "Gambero Rosso HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "gamberorosso",
+    "is_free": true
+  },
+  {
+    "lcn": 136,
+    "name": "Classica HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "classica",
+    "is_free": true
+  },
+  {
+    "lcn": 141,
+    "name": "RSI La1",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "rsila1",
+    "is_free": true
+  },
+  {
+    "lcn": 142,
+    "name": "RSI La2",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "rsila2",
+    "is_free": true
+  },
+  {
+    "lcn": 145,
+    "name": "BBC Top Gear Italy",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "bbctopgearitaly",
+    "is_free": true
+  },
+  {
+    "lcn": 148,
+    "name": "TV8 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_free",
+    "sky_id": "7",
+    "is_free": true
+  },
+  {
+    "lcn": 149,
+    "name": "NOVE HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "nove",
+    "is_free": true
+  },
+  {
+    "lcn": 151,
+    "name": "20Mediaset HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "20mediaset",
+    "is_free": true
+  },
+  {
+    "lcn": 156,
+    "name": "Cielo",
+    "group": "Intrattenimento e Serie TV",
+    "source": "sky_free",
+    "sky_id": "2",
+    "is_free": true
+  },
+  {
+    "lcn": 157,
+    "name": "TV2000 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "tv2000",
+    "is_free": true
+  },
+  {
+    "lcn": 158,
+    "name": "27Twentyseven HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "27twentyseven",
+    "is_free": true
+  },
+  {
+    "lcn": 159,
+    "name": "La 5 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "la5",
+    "is_free": true
+  },
+  {
+    "lcn": 160,
+    "name": "Real Time HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "realtime",
+    "is_free": true
+  },
+  {
+    "lcn": 161,
+    "name": "LA7 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "la7",
+    "is_free": true
+  },
+  {
+    "lcn": 162,
+    "name": "Food Network",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "foodnetwork",
+    "is_free": true
+  },
+  {
+    "lcn": 163,
+    "name": "Mediaset Extra HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "mediasetextra",
+    "is_free": true
+  },
+  {
+    "lcn": 167,
+    "name": "GIALLO HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "giallo",
+    "is_free": true
+  },
+  {
+    "lcn": 168,
+    "name": "TOPcrime HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "topcrime",
+    "is_free": true
+  },
+  {
+    "lcn": 170,
+    "name": "DMAX HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "dmax",
+    "is_free": true
+  },
+  {
+    "lcn": 175,
+    "name": "Mediaset Italia2 HD",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "mediasetitalia2",
+    "is_free": true
+  },
+  {
+    "lcn": 176,
+    "name": "Explorer HD Channel",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "explorerchannel",
+    "is_free": true
+  },
+  {
+    "lcn": 180,
+    "name": "Class TV Moda",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "classtvmoda",
+    "is_free": true
+  },
+  {
+    "lcn": 199,
+    "name": "Rai 4K",
+    "group": "Intrattenimento e Serie TV",
+    "source": "wltv",
+    "wltv_id": "rai4k",
+    "is_free": true
+  },
+  {
+    "lcn": 200,
+    "name": "Sky Sport 24 HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "is_free": false,
+    "sky_ppv_id": "skysport24"
+  },
+  {
+    "lcn": 201,
+    "name": "Sky Sport Uno HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportuno",
+    "is_free": false
+  },
+  {
+    "lcn": 202,
+    "name": "Sky Sport Calcio HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportfootball",
+    "is_free": false
+  },
+  {
+    "lcn": 203,
+    "name": "Sky Sport Tennis HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysporttennis",
+    "is_free": false
+  },
+  {
+    "lcn": 204,
+    "name": "Sky Sport Arena HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportarena",
+    "is_free": false
+  },
+  {
+    "lcn": 205,
+    "name": "Sky Sport Max HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportmax",
+    "is_free": false
+  },
+  {
+    "lcn": 206,
+    "name": "Sky Sport Golf HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportgolf",
+    "is_free": false
+  },
+  {
+    "lcn": 207,
+    "name": "Sky Sport F1 HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportf1",
+    "is_free": false
+  },
+  {
+    "lcn": 208,
+    "name": "Sky Sport MotoGP HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportmotogp",
+    "is_free": false
+  },
+  {
+    "lcn": 209,
+    "name": "Sky Sport Basket HD",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportnba",
+    "is_free": false
+  },
+  {
+    "lcn": 210,
+    "name": "Sky Sport Legend",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportlegend",
+    "is_free": false
+  },
+  {
+    "lcn": 211,
+    "name": "Sky Sport Mix",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportmix",
+    "is_free": false
+  },
+  {
+    "lcn": 212,
+    "name": "SuperTennis HD",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "supertennis",
+    "is_free": true
+  },
+  {
+    "lcn": 213,
+    "name": "DAZN 1",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "dazn1",
+    "is_free": true
+  },
+  {
+    "lcn": 215,
+    "name": "Sky Sport Business 1",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportbusiness1",
+    "is_free": false
+  },
+  {
+    "lcn": 216,
+    "name": "Sky Sport Business 2",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportbusiness2",
+    "is_free": false
+  },
+  {
+    "lcn": 217,
+    "name": "Prime Video Sportsbar",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "primevideosportsbar",
+    "is_free": true
+  },
+  {
+    "lcn": 218,
+    "name": "SportItalia Plus",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "sportitaliaplus",
+    "is_free": true
+  },
+  {
+    "lcn": 219,
+    "name": "SportItalia SoloCalcio",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "sportitaliasolocalcio",
+    "is_free": true
+  },
+  {
+    "lcn": 220,
+    "name": "EQUtv",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "equtv",
+    "is_free": true
+  },
+  {
+    "lcn": 221,
+    "name": "Horse TV HD",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "horsetv",
+    "is_free": true
+  },
+  {
+    "lcn": 222,
+    "name": "BIKE",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "bike",
+    "is_free": true
+  },
+  {
+    "lcn": 227,
+    "name": "RAI Sport",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "raisport",
+    "is_free": true
+  },
+  {
+    "lcn": 228,
+    "name": "ACI Sport TV",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "acisporttv",
+    "is_free": true
+  },
+  {
+    "lcn": 229,
+    "name": "MS MOTORTV",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "msmotortv",
+    "is_free": true
+  },
+  {
+    "lcn": 233,
+    "name": "Lazio Style HD",
+    "group": "Sport",
+    "source": "wltv",
+    "wltv_id": "laziostyle",
+    "is_free": true
+  },
+  {
+    "lcn": 235,
+    "name": "CACCIA e Pesca",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "cacciaepesca",
+    "is_free": false
+  },
+  {
+    "lcn": 236,
+    "name": "Caccia e PESCA",
+    "group": "Sport",
+    "source": "sky_pay",
+    "sky_ppv_id": "cacciaepesca",
+    "is_free": false
+  },
+  {
+    "lcn": 249,
+    "name": "Sky Sport Calcio HD",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysportfootball",
+    "is_free": false
+  },
+  {
+    "lcn": 250,
+    "name": "Sky Sport 250",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport250",
+    "is_free": false
+  },
+  {
+    "lcn": 251,
+    "name": "Sky Sport 251",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport251",
+    "is_free": false
+  },
+  {
+    "lcn": 252,
+    "name": "Sky Sport 252",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport252",
+    "is_free": false
+  },
+  {
+    "lcn": 253,
+    "name": "Sky Sport 253",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport253",
+    "is_free": false
+  },
+  {
+    "lcn": 254,
+    "name": "Sky Sport 254",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport254",
+    "is_free": false
+  },
+  {
+    "lcn": 255,
+    "name": "Sky Sport 255",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport255",
+    "is_free": false
+  },
+  {
+    "lcn": 256,
+    "name": "Sky Sport 256",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport256",
+    "is_free": false
+  },
+  {
+    "lcn": 257,
+    "name": "Sky Sport 257",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport257",
+    "is_free": false
+  },
+  {
+    "lcn": 258,
+    "name": "Sky Sport 258",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport258",
+    "is_free": false
+  },
+  {
+    "lcn": 259,
+    "name": "Sky Sport 259",
+    "group": "Calcio",
+    "source": "sky_pay",
+    "sky_ppv_id": "skysport259",
+    "is_free": false
+  },
+  {
+    "lcn": 301,
+    "name": "Sky Cinema Uno HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemauno",
+    "is_free": false
+  },
+  {
+    "lcn": 302,
+    "name": "Sky Cinema Due HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemadue",
+    "is_free": false
+  },
+  {
+    "lcn": 303,
+    "name": "Sky Cinema Collection HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemacollection",
+    "is_free": false
+  },
+  {
+    "lcn": 304,
+    "name": "Sky Cinema Family HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemafamily",
+    "is_free": false
+  },
+  {
+    "lcn": 305,
+    "name": "Sky Cinema Action HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemaaction",
+    "is_free": false
+  },
+  {
+    "lcn": 306,
+    "name": "Sky Cinema Suspense HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemasuspense",
+    "is_free": false
+  },
+  {
+    "lcn": 307,
+    "name": "Sky Cinema Romance HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemaromance",
+    "is_free": false
+  },
+  {
+    "lcn": 308,
+    "name": "Sky Cinema Drama HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemadrama",
+    "is_free": false
+  },
+  {
+    "lcn": 309,
+    "name": "Sky Cinema Comedy HD",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemacomedy",
+    "is_free": false
+  },
+  {
+    "lcn": 310,
+    "name": "Sky Cinema Uno +24",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemaunoplus24",
+    "is_free": false
+  },
+  {
+    "lcn": 311,
+    "name": "Sky Cinema Due +24",
+    "group": "Cinema",
+    "source": "sky_pay",
+    "sky_ppv_id": "skycinemadueplus24",
+    "is_free": false
+  },
+  {
+    "lcn": 325,
+    "name": "Iris HD",
+    "group": "Cinema",
+    "source": "wltv",
+    "wltv_id": "iris",
+    "is_free": true
+  },
+  {
+    "lcn": 327,
+    "name": "Cine34 HD",
+    "group": "Cinema",
+    "source": "wltv",
+    "wltv_id": "cine34",
+    "is_free": true
+  },
+  {
+    "lcn": 500,
+    "name": "Sky TG24 HD",
+    "group": "News",
+    "source": "sky_free",
+    "sky_id": "1",
+    "is_free": true
+  },
+  {
+    "lcn": 501,
+    "name": "Sky TG24 Primo Piano",
+    "group": "News",
+    "source": "sky_pay",
+    "sky_ppv_id": "skytg24primopiano",
+    "is_free": false
+  },
+  {
+    "lcn": 502,
+    "name": "Sky Meteo 24 HD",
+    "group": "News",
+    "source": "sky_pay",
+    "sky_ppv_id": "skymeteo24",
+    "is_free": false
+  },
+  {
+    "lcn": 503,
+    "name": "Sky Sport 24 HD",
+    "group": "News",
+    "source": "sky_pay",
+    "is_free": false,
+    "sky_ppv_id": "skysport24"
+  },
+  {
+    "lcn": 507,
+    "name": "Class CNBC",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "classcnbc",
+    "is_free": true
+  },
+  {
+    "lcn": 508,
+    "name": "Rai News 24",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "rainews24",
+    "is_free": true
+  },
+  {
+    "lcn": 509,
+    "name": "TgCom24 HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "tgcom24",
+    "is_free": true
+  },
+  {
+    "lcn": 510,
+    "name": "TG NORBA 24",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "tgnorba24",
+    "is_free": true
+  },
+  {
+    "lcn": 515,
+    "name": "Vatican Media Europa",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "vaticanmediaeuropa",
+    "is_free": true
+  },
+  {
+    "lcn": 518,
+    "name": "Emilia Romagna 24",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "emiliaromagna24",
+    "is_free": true
+  },
+  {
+    "lcn": 519,
+    "name": "TRM h24",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "trmh24",
+    "is_free": true
+  },
+  {
+    "lcn": 520,
+    "name": "San Marino RTV HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "sanmarinortv",
+    "is_free": true
+  },
+  {
+    "lcn": 521,
+    "name": "Euronews",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "euronews",
+    "is_free": true
+  },
+  {
+    "lcn": 522,
+    "name": "Sky News",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "skynews",
+    "is_free": true
+  },
+  {
+    "lcn": 523,
+    "name": "Fox News",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "foxnews",
+    "is_free": true
+  },
+  {
+    "lcn": 524,
+    "name": "Camera dei Deputati",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "cameradeideputati",
+    "is_free": true
+  },
+  {
+    "lcn": 525,
+    "name": "Senato Italiano",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "senatoitaliano",
+    "is_free": true
+  },
+  {
+    "lcn": 526,
+    "name": "CNN Intl.",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "cnnintl",
+    "is_free": true
+  },
+  {
+    "lcn": 527,
+    "name": "Fox Business",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "foxbusiness",
+    "is_free": true
+  },
+  {
+    "lcn": 528,
+    "name": "CNBC HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "cnbc",
+    "is_free": true
+  },
+  {
+    "lcn": 529,
+    "name": "Bloomberg",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "bloomberg",
+    "is_free": true
+  },
+  {
+    "lcn": 530,
+    "name": "BBC World News",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "bbcworldnews",
+    "is_free": true
+  },
+  {
+    "lcn": 531,
+    "name": "France 24 English HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "france24english",
+    "is_free": true
+  },
+  {
+    "lcn": 532,
+    "name": "Al Jazeera Intl. HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "aljazeeraintl",
+    "is_free": true
+  },
+  {
+    "lcn": 533,
+    "name": "NHK World TV HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "nhkworldtv",
+    "is_free": true
+  },
+  {
+    "lcn": 534,
+    "name": "Arirang TV",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "arirangtv",
+    "is_free": true
+  },
+  {
+    "lcn": 535,
+    "name": "CGTN",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "cgtn",
+    "is_free": true
+  },
+  {
+    "lcn": 538,
+    "name": "Euronews English HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "euronewsenglish",
+    "is_free": true
+  },
+  {
+    "lcn": 541,
+    "name": "France 24 Français HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "france24francais",
+    "is_free": true
+  },
+  {
+    "lcn": 543,
+    "name": "Deutsche Welle HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "deutschewelle",
+    "is_free": true
+  },
+  {
+    "lcn": 552,
+    "name": "TVP Polonia",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "tvppolonia",
+    "is_free": true
+  },
+  {
+    "lcn": 558,
+    "name": "TVR Intl.",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "tvrintl",
+    "is_free": true
+  },
+  {
+    "lcn": 560,
+    "name": "Al Jazeera HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "aljazeera",
+    "is_free": true
+  },
+  {
+    "lcn": 561,
+    "name": "Al Arabiya",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "alarabiya",
+    "is_free": true
+  },
+  {
+    "lcn": 562,
+    "name": "BBC Arabic",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "bbcarabic",
+    "is_free": true
+  },
+  {
+    "lcn": 563,
+    "name": "Sky News Arabia HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "skynewsarabia",
+    "is_free": true
+  },
+  {
+    "lcn": 564,
+    "name": "TRT World HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "trtworld",
+    "is_free": true
+  },
+  {
+    "lcn": 567,
+    "name": "TRT Arabi HD",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "trtarabi",
+    "is_free": true
+  },
+  {
+    "lcn": 568,
+    "name": "ESC - Al Masriyah",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "escalmasriyah",
+    "is_free": true
+  },
+  {
+    "lcn": 569,
+    "name": "Tunis 7",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "tunis7",
+    "is_free": true
+  },
+  {
+    "lcn": 580,
+    "name": "CCTV-4",
+    "group": "News",
+    "source": "wltv",
+    "wltv_id": "cctv4",
+    "is_free": true
+  },
+  {
+    "lcn": 601,
+    "name": "DeA Kids",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "deakids",
+    "is_free": false
+  },
+  {
+    "lcn": 602,
+    "name": "DeA Kids +1",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "deakidsplus",
+    "is_free": false
+  },
+  {
+    "lcn": 603,
+    "name": "Nick Jr.",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "nickjr",
+    "is_free": false
+  },
+  {
+    "lcn": 604,
+    "name": "Nick Jr. +1",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "nickjrplus",
+    "is_free": false
+  },
+  {
+    "lcn": 605,
+    "name": "Nickelodeon",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "nickelodeon",
+    "is_free": false
+  },
+  {
+    "lcn": 606,
+    "name": "Nickelodeon +1",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "nickelodeonplus",
+    "is_free": false
+  },
+  {
+    "lcn": 607,
+    "name": "Cartoon Network",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "cartoonnetwork",
+    "is_free": false
+  },
+  {
+    "lcn": 608,
+    "name": "Cartoon Network +1",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "cartoonnetworkplus",
+    "is_free": false
+  },
+  {
+    "lcn": 609,
+    "name": "Disney Channel",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "disneychannel",
+    "is_free": false
+  },
+  {
+    "lcn": 610,
+    "name": "Disney Channel +1",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "disneychannelplus",
+    "is_free": false
+  },
+  {
+    "lcn": 623,
+    "name": "DeA Junior",
+    "group": "Bambini",
+    "source": "sky_pay",
+    "sky_ppv_id": "deajunior",
+    "is_free": false
+  },
+  {
+    "lcn": 625,
+    "name": "Super!",
+    "group": "Bambini",
+    "source": "wltv",
+    "wltv_id": "super",
+    "is_free": true
+  },
+  {
+    "lcn": 626,
+    "name": "K2",
+    "group": "Bambini",
+    "source": "wltv",
+    "wltv_id": "k2",
+    "is_free": true
+  },
+  {
+    "lcn": 627,
+    "name": "Frisbee",
+    "group": "Bambini",
+    "source": "wltv",
+    "wltv_id": "frisbee",
+    "is_free": true
+  },
+  {
+    "lcn": 628,
+    "name": "Boing",
+    "group": "Bambini",
+    "source": "wltv",
+    "wltv_id": "boing",
+    "is_free": true
+  },
+  {
+    "lcn": 629,
+    "name": "Boing Plus",
+    "group": "Bambini",
+    "source": "wltv",
+    "wltv_id": "boingplus",
+    "is_free": true
+  },
+  {
+    "lcn": 630,
+    "name": "Cartoonito",
+    "group": "Bambini",
+    "source": "wltv",
+    "wltv_id": "cartoonito",
+    "is_free": true
+  },
+  {
+    "lcn": 701,
+    "name": "Sky Primafila 1",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila1",
+    "is_free": false
+  },
+  {
+    "lcn": 702,
+    "name": "Sky Primafila 2",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila2",
+    "is_free": false
+  },
+  {
+    "lcn": 703,
+    "name": "Sky Primafila 3",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila3",
+    "is_free": false
+  },
+  {
+    "lcn": 704,
+    "name": "Sky Primafila 4",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila4",
+    "is_free": false
+  },
+  {
+    "lcn": 705,
+    "name": "Sky Primafila 5",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila5",
+    "is_free": false
+  },
+  {
+    "lcn": 706,
+    "name": "Sky Primafila 6",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila6",
+    "is_free": false
+  },
+  {
+    "lcn": 707,
+    "name": "Sky Primafila 7",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila7",
+    "is_free": false
+  },
+  {
+    "lcn": 708,
+    "name": "Sky Primafila 8",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila8",
+    "is_free": false
+  },
+  {
+    "lcn": 709,
+    "name": "Sky Primafila 9",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila9",
+    "is_free": false
+  },
+  {
+    "lcn": 710,
+    "name": "Sky Primafila 10",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila10",
+    "is_free": false
+  },
+  {
+    "lcn": 711,
+    "name": "Sky Primafila 11",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila11",
+    "is_free": false
+  },
+  {
+    "lcn": 712,
+    "name": "Sky Primafila 12",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila12",
+    "is_free": false
+  },
+  {
+    "lcn": 713,
+    "name": "Sky Primafila 13",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila13",
+    "is_free": false
+  },
+  {
+    "lcn": 714,
+    "name": "Sky Primafila 14",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila14",
+    "is_free": false
+  },
+  {
+    "lcn": 715,
+    "name": "Sky Primafila 15",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila15",
+    "is_free": false
+  },
+  {
+    "lcn": 716,
+    "name": "Sky Primafila 16",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila16",
+    "is_free": false
+  },
+  {
+    "lcn": 717,
+    "name": "Sky Primafila 17",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila17",
+    "is_free": false
+  },
+  {
+    "lcn": 718,
+    "name": "Sky Primafila 18",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafila18",
+    "is_free": false
+  },
+  {
+    "lcn": 719,
+    "name": "Sky Primafila Premiere 01",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafilapremiere01",
+    "is_free": false
+  },
+  {
+    "lcn": 720,
+    "name": "Sky Primafila Premiere 02",
+    "group": "Primafila",
+    "source": "sky_pay",
+    "sky_ppv_id": "skyprimafilapremiere02",
+    "is_free": false
+  },
+  {
+    "lcn": 1000,
+    "name": "TeleNorba",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "telenorba",
+    "is_free": true
+  },
+  {
+    "lcn": 1001,
+    "name": "Radio Norba Television",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "radionorbatelevision",
+    "is_free": true
+  },
+  {
+    "lcn": 1002,
+    "name": "Teledue",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "teledue",
+    "is_free": true
+  },
+  {
+    "lcn": 1003,
+    "name": "TG Norba 24",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "tgnorba24",
+    "is_free": true
+  },
+  {
+    "lcn": 1004,
+    "name": "Antenna Sud",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "antennasud",
+    "is_free": true
+  },
+  {
+    "lcn": 1005,
+    "name": "Telerama",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "telerama",
+    "is_free": true
+  },
+  {
+    "lcn": 1006,
+    "name": "TRM h24",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "trmh24",
+    "is_free": true
+  },
+  {
+    "lcn": 1007,
+    "name": "Telebari",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "telebari",
+    "is_free": true
+  },
+  {
+    "lcn": 1008,
+    "name": "Telesveva",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "telesveva",
+    "is_free": true
+  },
+  {
+    "lcn": 1009,
+    "name": "Tele Dehon",
+    "group": "Regionali",
+    "source": "wltv",
+    "wltv_id": "teledehon",
+    "is_free": true
+  }
+]
