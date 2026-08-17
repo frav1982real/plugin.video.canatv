@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """Risoluzione stream unificata (wltv / sky_free / sky_pay / vavoo) e ListItem Kodi."""
 import json
+import re
 from datetime import datetime, timedelta
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 
 import requests
 import xbmcgui
@@ -29,19 +30,13 @@ def _sky_pay_template():
     return template
 
 
-def _probe_manifest(url, user_agent=None, referer=None, origin=None, timeout=5):
+def _probe_manifest(url, user_agent=None, referer=None, origin=None, timeout=8, segment_probe=False):
     """Verifica che un URL manifest sia ancora vivo (non scaduto).
 
     Ritorna True se la GET al manifest risponde 200 e il body
     inizia con un marker di manifest valido (#EXTM3U HLS o
-    <MPD DASH). False altrimenti (403/404, manifest vuoto, DNS
-    fail, timeout).
-
-    Serve a NON dare a Kodi un URL scaduto: Kodi accetterebbe il
-    ListItem, partirebbe il player e poi si chiuderebbe in modo
-    silente senza dare all'utente la chance di vedere il fallback
-    Vavoo. Verificando il manifest a monte, se e' scaduto ritorniamo
-    None e il chiamante cascata fino a Vavoo automaticamente.
+    <MPD DASH). Se segment_probe=True, tenta di scaricare anche
+    i primi byte del primo segmento del flusso.
     """
     headers = {
         "User-Agent": user_agent or utils.SKY_UA,
@@ -52,23 +47,50 @@ def _probe_manifest(url, user_agent=None, referer=None, origin=None, timeout=5):
     if origin:
         headers["Origin"] = origin
     try:
-        resp = requests.get(url, headers=headers, timeout=timeout,
-                            stream=True, allow_redirects=True)
+        # Probe manifest principale
+        resp_manifest = requests.get(url, headers=headers, timeout=timeout,
+                                     stream=True, allow_redirects=True)
         try:
-            status = resp.status_code
-            chunk = next(resp.iter_content(256), b"")
+            status = resp_manifest.status_code
+            chunk_manifest = next(resp_manifest.iter_content(256), b"")
         finally:
             try:
-                resp.close()
+                resp_manifest.close()
             except Exception:
                 pass
+
         if status != 200:
+            utils.log(f"Probe manifest: {url[:80]} -> HTTP {status}")
             return False
-        text = chunk.decode("utf-8", "ignore").lstrip()
-        # HLS / DASH / Smooth / MSS
-        return any(text.startswith(p) for p in ("#EXTM3U", "<?xml", "<MPD"))
+        text = chunk_manifest.decode("utf-8", "ignore").lstrip()
+        if not any(text.startswith(p) for p in ("#EXTM3U", "<?xml", "<MPD")):
+            utils.log(f"Probe manifest: {url[:80]} -> non e' un manifest valido")
+            return False
+
+        # Se e' un HLS e richiesto, tenta di scaricare il primo segmento
+        if segment_probe and text.startswith("#EXTM3U"):
+            m = re.search(r"^#EXTINF:.*\n(\S+)", text, re.MULTILINE)
+            if m:
+                segment_url_raw = m.group(1).strip()
+                segment_url = urljoin(url, segment_url_raw)
+                utils.log(f"Probe segmento: {segment_url[:80]}")
+                resp_segment = requests.get(segment_url, headers=headers, timeout=timeout, stream=True)
+                try:
+                    status_segment = resp_segment.status_code
+                    # Scarica giusto qualche byte per verificare l'accesso
+                    _ = next(resp_segment.iter_content(16), b"")
+                finally:
+                    try:
+                        resp_segment.close()
+                    except Exception:
+                        pass
+                if status_segment != 200:
+                    utils.log(f"Probe segmento: {segment_url[:80]} -> HTTP {status_segment}")
+                    return False
+        utils.log(f"Probe manifest: {url[:80]} -> OK")
+        return True
     except Exception as exc:
-        utils.log("Probe manifest fallito: %s (%s)" % (url[:60], type(exc).__name__))
+        utils.log(f"Probe manifest fallito: {url[:60]} ({type(exc).__name__}) - {exc}")
         return False
 
 
@@ -97,7 +119,8 @@ def resolve_sky_free(sky_id):
         # Probe: i token Akamai durano ~5 minuti, puo' essere gia' scaduto
         # quando Kodi lo usa. Se scaduto, evita di dare un URL morto.
         if not _probe_manifest(stream_url, user_agent=utils.SKY_UA,
-                               referer=referer, origin="https://video.sky.it"):
+                               referer=referer, origin="https://video.sky.it",
+                               segment_probe=True):
             utils.log("Sky free %s: manifest scaduto (probe fallito)" % sky_id)
             return None
         utils.log("Sky free %s: %s" % (sky_id, stream_url[:80]))
@@ -196,6 +219,7 @@ def _resolve_sky_pay_once(sky_ppv_id, secret):
             user_agent=utils.SKY_UA,
             referer=utils.NOWTV_HOST,
             origin=utils.NOWTV_HOST,
+            segment_probe=True
         ):
             utils.log("Sky pay %s: manifest scaduto (probe fallito)" % sky_ppv_id)
             return None

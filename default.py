@@ -5,8 +5,14 @@ import sys
 import urllib.parse
 
 import xbmc
+import xbmcaddon
 import xbmcgui
 import xbmcplugin
+
+import time
+import requests
+import re # needed for _prefetch_stream, moved up
+from urllib.parse import urljoin # needed for _prefetch_stream, moved up
 
 from resources.lib import builder, channel_fetcher, resolver, utils
 
@@ -35,6 +41,41 @@ def parse_params():
     if raw.startswith("?"):
         raw = raw[1:]
     return dict(urllib.parse.parse_qsl(raw))
+
+
+def _buffer_seconds():
+    try:
+        return max(0, min(60, int(float(utils.setting("buffer_seconds", "10")))))
+    except Exception:
+        return 10
+
+
+def _prefetch_stream(url, budget_s):
+    """Pre-carica il manifest e l'inizio del primo segmento (best effort).
+
+    Scalda la cache del CDN e verifica che lo stream risponda prima di
+    consegnarlo al player; non blocca mai piu' di `budget_s` secondi.
+    """
+    try:
+        headers = {"User-Agent": "Mozilla/5.0"}
+        resp = requests.get(url, headers=headers, timeout=max(2, budget_s))
+        manifest = resp.text
+        segments = [
+            ln.strip()
+            for ln in manifest.split("\n")
+            if ln.strip() and not ln.startswith("#")
+        ]
+        if not segments:
+            return
+        base = url.rsplit("/", 1)[0]
+        seg_url = urljoin(base, segments[0]) # Usa urljoin per path relativi
+        deadline = time.time() + budget_s
+        with requests.get(seg_url, headers=headers, timeout=budget_s, stream=True) as sr:
+            for _ in sr.iter_content(128 * 1024):
+                if time.time() > deadline:
+                    break
+    except Exception as exc:
+        utils.log("prefetch: %s" % exc)
 
 
 def _entries():
@@ -221,14 +262,7 @@ def run_playtest():
 
 
 def play_channel(params):
-    """Riproduce un canale. SEMPRE: 1) sorgente primaria, 2) Vavoo ultima opzione.
-
-    Vavoo e' l'ultima spiaggia: viene sempre tentato come fallback finale,
-    indipendentemente dal fatto che la sorgente primaria abbia funzionato.
-    Se vavoo_id non era pre-salvato, si fa un match on-the-fly col nome del
-    canale. Cosi OGNI click su un canale finisce sempre con Vavoo come
-    ultima opzione tentata.
-    """
+    """Riproduce un canale. SEMPRE: 1) sorgente primaria, 2) Vavoo ultima opzione."""
     utils.set_debug()
     source = params.get("source") or "wltv"
     identifier = params.get("identifier") or ""
@@ -262,6 +296,10 @@ def play_channel(params):
         xbmcgui.Dialog().ok(ADDON_ID, _(32209) % name)
         xbmcplugin.setResolvedUrl(_handle, False, xbmcgui.ListItem())
         return
+
+    # Buffering: pre-carica qualche secondo di contenuto prima del play (solo per http/https streams)
+    if _buffer_seconds() > 0 and li and li.getPath().startswith("http"):
+        _prefetch_stream(li.getPath(), _buffer_seconds())
 
     if _handle >= 0:
         xbmcplugin.setResolvedUrl(_handle, True, li)

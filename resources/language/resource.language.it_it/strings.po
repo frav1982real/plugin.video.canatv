@@ -100,6 +100,14 @@ msgctxt "#30501"
 msgid "Enable Vavoo.to fallback channels"
 msgstr "Abilita canali fallback Vavoo.to"
 
+msgctxt "#30600"
+msgid "Vavoo Playback"
+msgstr "Riproduzione Vavoo"
+
+msgctxt "#30601"
+msgid "Pre-buffer seconds (0 to disable)"
+msgstr "Secondi di pre-buffer (0 per disabilitare)"
+
 msgctxt "#32100"
 msgid "Setup / Update channels"
 msgstr "Configura / Aggiorna canali"

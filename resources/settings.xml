@@ -120,5 +120,20 @@
         </setting>
       </group>
     </category>
+    <category id="vavoo_play" label="30600" help="">
+      <group id="1" label="30600">
+        <setting id="buffer_seconds" type="integer" label="30601" help="">
+          <level>0</level>
+          <default>10</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>60</maximum>
+          </constraints>
+          <control type="edit" format="integer">
+            <heading>30601</heading>
+          </control>
+        </setting>
+      </group>
+    </category>
   </section>
 </settings>
