@@ -552,30 +552,6 @@
     "is_free": true
   },
   {
-    "lcn": 215,
-    "name": "Sky Sport Business 1",
-    "group": "Sport",
-    "source": "sky_pay",
-    "sky_ppv_id": "skysportbusiness1",
-    "is_free": false
-  },
-  {
-    "lcn": 216,
-    "name": "Sky Sport Business 2",
-    "group": "Sport",
-    "source": "sky_pay",
-    "sky_ppv_id": "skysportbusiness2",
-    "is_free": false
-  },
-  {
-    "lcn": 217,
-    "name": "Prime Video Sportsbar",
-    "group": "Sport",
-    "source": "wltv",
-    "wltv_id": "primevideosportsbar",
-    "is_free": true
-  },
-  {
     "lcn": 218,
     "name": "SportItalia Plus",
     "group": "Sport",
@@ -869,14 +845,6 @@
     "group": "News",
     "source": "sky_pay",
     "sky_ppv_id": "skytg24primopiano",
-    "is_free": false
-  },
-  {
-    "lcn": 502,
-    "name": "Sky Meteo 24 HD",
-    "group": "News",
-    "source": "sky_pay",
-    "sky_ppv_id": "skymeteo24",
     "is_free": false
   },
   {
